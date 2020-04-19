@@ -16,6 +16,7 @@ class CloneRepo:
         print ('Cloning repository into ',dir,'...')
         try:
             cloned_repo = Repo.clone_from(repo_url, repo_name, branch=self.branch)
+            print (Fore.GREEN + 'Repository cloned successfully!')
         except git.GitCommandError as e:
             print (Fore.RED + e.stderr)
             sys.exit()

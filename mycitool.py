@@ -47,7 +47,6 @@ def main():
     client = docker.from_env() 
     step2 = BuildImage(client)
     step2.build_image(dir)
-    print (client.containers.list())
 
 
 if __name__ == '__main__':

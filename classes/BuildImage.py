@@ -12,6 +12,7 @@ class BuildImage:
         print ('Building image and starting container(s) ...')
         try:
             self.client.images.build(path=dir)
+            print (Fore.GREEN + 'OK')
         except APIError as error:
             print (Fore.RED + error)
             sys.exit()
